@@ -1,4 +1,4 @@
-package com.haliri.israj.javaspringbootoauth2server;
+package com.haliri.israj.javaspringbootoauth2server.resource;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,13 +11,8 @@ import java.security.Principal;
  */
 
 @RestController
-@RequestMapping("/rest/hello")
-public class HelloResource {
-
-    @GetMapping
-    public String hello(){
-        return "hello world";
-    }
+@RequestMapping("/api/users")
+public class UsersResource {
 
     @GetMapping("/principal")
     public Principal user(Principal principal){
